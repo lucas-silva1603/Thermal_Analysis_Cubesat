@@ -12,7 +12,7 @@ clearvars
 % Inputs -----------------------------------------------------------
     
     % Orbital data
-    h = 450;  % Altitude (km)
+    h = 300;  % Altitude (km)
     orbit_count = 20;
     T0 = 273; % Initial temperature
 
@@ -153,13 +153,11 @@ title('Satellite Temperature Over Time and Absorptivity');
 colorbar;
 hold
 
-%exportgraphics(gcf,'Graph1.png','BackgroundColor','black','Resolution',1000);
+exportgraphics(gcf,'.png','BackgroundColor','none','Resolution',1000);
 
 figure;
 plot(time,T_over_time(:,11))
 hold
-
-%exportgraphics(gcf,'Graph2.png', 'BackgroundColor','black','Resolution',1000);
 
 
 function s_v = s(t, tau, fe)
